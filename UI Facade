@@ -1,0 +1,28 @@
+<?php
+/**
+ * User Interface Layer Facade
+ * POS Management System - January 2026
+ */
+class UIFacade {
+    private $alFacade;
+
+    public function __construct($alFacade) {
+        $this->alFacade = $alFacade;
+    }
+
+    /**
+     * Displays the main Login screen for Cashiers
+     */
+    public function showLoginPage() {
+        echo "Displaying POS Login Screen...";
+    }
+
+    /**
+     * Facilitates the product sale process from the UI
+     */
+    public function submitSaleOrder($cartDetails) {
+        // Logic to pass POS UI data to the Application Logic layer
+        return $this->alFacade->processProductSale($cartDetails);
+    }
+}
+?>
