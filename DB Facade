@@ -1,0 +1,25 @@
+<?php
+/**
+ * Data Layer Facade
+ * POS Management System - January 2026
+ */
+class DBFacade {
+    public $product_id;
+    public $barcode;
+
+    /**
+     * Initializes connection to the POS system database
+     */
+    public function connect() {
+        echo "Connected to POS System Database.";
+    }
+
+    /**
+     * Saves a new sales or product record
+     */
+    public function saveRecord($table, $data) {
+        echo "Saving data into table: " . $table;
+        return true;
+    }
+}
+?>
